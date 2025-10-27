@@ -2,12 +2,12 @@
 
 Language used JavaScript
 
-Tasks, create functions to return value as per requirement.
+## Tasks, create functions to return value as per requirement.
 
 Task 1: Flexible String Manipulation with Functions
-        function with two params name, lastname (String)
-        Output, name should be separated by coma
-        First letter of name, lastName must be capitalized
+       - function with two params name, lastname (String)
+       - Output, name should be separated by coma
+       - First letter of name, lastName must be capitalized
 
 Task 2: Mathematical Operations with Multiple Parameters
         Function to calculate a shop basket with three params
