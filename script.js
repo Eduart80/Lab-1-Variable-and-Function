@@ -22,7 +22,7 @@ let cart = [];
 //   renderCart();
 // });
  
-
+// ==============TASK 1==============
 let userName= ''
 let userLastName = 'smith'
 function formatFullName (firstName, lastName ){
@@ -39,6 +39,7 @@ function formatFullName (firstName, lastName ){
 }
 console.log(`Task 1: ${formatFullName(userName,userLastName)}`);
 
+// ============== TASK 2 ==============
 let item1 = 21
 let items = 2
 let tax = 15
@@ -50,6 +51,8 @@ function calculateTotalCost(price, quantity, taxRate){
   return totalCost + tax
 }
 console.log(`Task 2: ${calculateTotalCost(item1, items, tax)}`);
+
+// ============== TASK 3 ==============
 
 // function can accept one property
 // second param is a boolean type true/false
@@ -69,3 +72,19 @@ console.log(`Tomy is 21 and ${checkEligibility(21,true)}`);
 console.log(` Ann is 19 and ${checkEligibility(19,false)}`);
 console.log(`John is 18 and ${checkEligibility(18)}`);
 console.log(`Person is -- and ${checkEligibility(false)}`);
+
+// ============== TASK 4 ==============
+
+let storeItem1 = 43
+let basket = 2
+let taxRate = 15  // 15%
+let discount = 10 // 10%
+
+function calculateTotalCost(price, quantity, taxRate, discount){
+  if(price && quantity && taxRate == "" || NaN) return "Invalid input"
+  let totalCost = (price * quantity) 
+  let tax =  (taxRate / 100) * totalCost // find 15 % of total costs
+  if(discount) return totalCost + tax - discount
+  return totalCost + tax
+}
+console.log(`Task 4: ${calculateTotalCost(item1, items, tax)}`);
