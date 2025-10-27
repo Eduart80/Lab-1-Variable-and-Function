@@ -38,3 +38,16 @@ function formatFullName (firstName, lastName ){
   return name+', '+lastName
 }
 console.log(`Task 1: ${formatFullName(userName,userLastName)}`);
+
+let item1 = 21
+let items = 2
+let tax = 15
+
+function calculateTotalCost(price, quantity, taxRate){
+  if(price && quantity && taxRate == "" || NaN) return "Invalid input"
+  let totalCost = (price * quantity) 
+  let tax =  (taxRate / 100) * totalCost // find 15 % of total costs
+  return totalCost + tax
+}
+console.log(`Task 2: ${calculateTotalCost(item1, items, tax)}`);
+
