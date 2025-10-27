@@ -23,13 +23,13 @@ let cart = [];
 // });
  
 
-let userName= 'john'
+let userName= ''
 let userLastName = 'smith'
 function formatFullName (firstName, lastName ){
   let name
   let last
-  if(firstName==="") return
-  if(lastName==="") return
+  if(firstName==="") return "Invalid name input"
+  if(lastName==="") return "Invalid lastName input"
 
   for(let i = 0; i <= 1; i++ ){
     name= firstName.charAt(0).toUpperCase() + firstName.slice(1)
