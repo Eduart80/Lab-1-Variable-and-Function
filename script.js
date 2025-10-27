@@ -82,9 +82,11 @@ let discount = 10 // 10%
 
 function calculateTotalCost(price, quantity, taxRate, discount){
   if(price && quantity && taxRate == "" || NaN) return "Invalid input"
-  let totalCost = (price * quantity) 
+  let totalCost = (price * quantity)   // calc total initial basket value
   let tax =  (taxRate / 100) * totalCost // find 15 % of total costs
-  if(discount) return totalCost + tax - discount
+  let discounts = (discount / 100) * (totalCost + tax) // discounts apply after
+  if(discount) return totalCost + tax - discounts
   return totalCost + tax
 }
-console.log(`Task 4: ${calculateTotalCost(item1, items, tax)}`);
+console.log(`Task 4: ${calculateTotalCost(storeItem1, basket, taxRate, discount)}`);
+console.log(`Task 4: ${calculateTotalCost(storeItem1, basket, taxRate)}`);
