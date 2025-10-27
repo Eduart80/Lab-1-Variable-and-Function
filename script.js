@@ -1,36 +1,40 @@
 let cart = [];
-let itemInput = document.getElementById("itemInput");
-let addItemButton = document.getElementById("addItemButton");
-let removeItemButton = document.getElementById("removeItemButton");
-let cartList = document.getElementById("cart");
+// let itemInput = document.getElementById("itemInput");
+// let addItemButton = document.getElementById("addItemButton");
+// let removeItemButton = document.getElementById("removeItemButton");
+// let cartList = document.getElementById("cart");
  
-addItemButton.addEventListener("click", function () {
-  let item = itemInput.value;
+// addItemButton.addEventListener("click", function () {
+//   let item = itemInput.value;
  
-  if (item === "") {
-    alert("Please enter an item.");
-    return;
-  }
+//   if (item === "") {
+//     alert("Please enter an item.");
+//     return;
+//   }
  
-  cart.push(item); // Add item to cart array
-  renderCart();
-  itemInput.value = ""; // Clear the input field
-});
+//   cart.push(item); // Add item to cart array
+//   renderCart();
+//   itemInput.value = ""; // Clear the input field
+// });
  
-removeItemButton.addEventListener("click", function () {
-  cart.pop(); // Remove last item from cart array
-  renderCart();
-});
+// removeItemButton.addEventListener("click", function () {
+//   cart.pop(); // Remove last item from cart array
+//   renderCart();
+// });
  
-function renderCart() {
-  cartList.innerHTML = ""; // Clear existing list
-  for (let i = 0; i < cart.length; i++) {
-    let listItem = document.createElement("li");
-    listItem.innerText = cart[i];
-    cartList.appendChild(listItem);
-  }
-}
 
+let userName= 'john'
+let userLastName = 'smith'
 function formatFullName (firstName, lastName ){
+  let name
+  let last
+  if(firstName==="") return
+  if(lastName==="") return
 
+  for(let i = 0; i <= 1; i++ ){
+    name= firstName.charAt(0).toUpperCase() + firstName.slice(1)
+    last= lastName.charAt(0).toUpperCase() + firstName.slice(1)
+  }
+  return name+', '+lastName
 }
+console.log(`Task 1: ${formatFullName(userName,userLastName)}`);
