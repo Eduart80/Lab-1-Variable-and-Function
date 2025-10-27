@@ -51,3 +51,21 @@ function calculateTotalCost(price, quantity, taxRate){
 }
 console.log(`Task 2: ${calculateTotalCost(item1, items, tax)}`);
 
+// function can accept one property
+// second param is a boolean type true/false
+function checkEligibility(age, isEmploed){
+  if(!age ) return 'enter age please'
+  else{ 
+    // If the person is over 18 and employed, they are eligible.
+    if(age > 18 && isEmploed) return "You are eligible"
+    // If the person is over 18 but unemployed, they are conditionally eligible.
+    if(age > 18 && !isEmploed) return "You are conditionally eligible"
+    // If the person is 18 or younger, they are not eligible.
+    if(age <= 18 ) return "You are not eligible"
+  }
+}
+console.log(`..empty.. ${checkEligibility('')}`);
+console.log(`Tomy is 21 and ${checkEligibility(21,true)}`);
+console.log(` Ann is 19 and ${checkEligibility(19,false)}`);
+console.log(`John is 18 and ${checkEligibility(18)}`);
+console.log(`Person is -- and ${checkEligibility(false)}`);
